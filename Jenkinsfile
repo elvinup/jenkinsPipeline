@@ -1,9 +1,13 @@
 pipeline {
   agent any
+
+libraries {
+  lib('lib-share-demo@master')
+}
   stages {
       stage('Demo') {
 	steps {
-	  echo 'Hello World'
+	  hello 'Shared Lib!'
 	}
       }
   }
